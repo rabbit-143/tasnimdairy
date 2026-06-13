@@ -1,0 +1,72 @@
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap";
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Outfit", system-ui, sans-serif;
+  --font-serif: "Georgia", ui-serif, serif;
+
+  --color-primary: #1E3E2B;
+  --color-primary-light: #2d5b3f;
+  --color-primary-dark: #12261b;
+  --color-secondary: #D4AF37;
+  --color-secondary-light: #e3c45b;
+  --color-secondary-dark: #a88820;
+  --color-farm-cream: #FDFBF7;
+  --color-farm-text: #2C3531;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-farm-cream);
+  color: var(--color-farm-text);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+/* Glassmorphism custom utilities */
+.glass {
+  background: rgba(253, 251, 247, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-dark {
+  background: rgba(30, 62, 43, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gold Gradient text and backgrounds */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #F9D976 0%, #D4AF37 50%, #A88820 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #F9D976 0%, #D4AF37 50%, #A88820 100%);
+}
+
+.gold-glow {
+  box-shadow: 0 4px 20px -2px rgba(212, 175, 55, 0.35);
+}
+
+.green-glow {
+  box-shadow: 0 10px 30px -5px rgba(30, 62, 43, 0.25);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
